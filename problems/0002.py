@@ -3,12 +3,12 @@ import sys
 if len(sys.argv) != 2:
     sys.exit("Please enter the input value")
 
-input = int(sys.argv[1])
+input_value = int(sys.argv[1])
 
 count = 0
 previous_value = 1
 current_value = 1
-while current_value + previous_value < input:
+while current_value + previous_value < input_value:
     next_value = current_value + previous_value
     previous_value = current_value
     current_value = next_value
