@@ -3,20 +3,20 @@ from math import floor, sqrt
 # from math import floor, sqrt
 def get_proper_divisors(number_to_check):
     divisors = set()
-    for i in range(floor(sqrt(number_to_check)), 0, -1):
-        if number_to_check % i == 0:
-            divisors.add(i)
-            divisors.add(int(number_to_check / i))
+    for divisor in range(floor(sqrt(number_to_check)), 0, -1):
+        if number_to_check % divisor == 0:
+            divisors.add(divisor)
+            divisors.add(int(number_to_check / divisor))
     divisors.remove(number_to_check)
     return divisors
 
 # from math import floor, sqrt
 def is_prime(number_to_check):
     divisors = set()
-    for i in range(floor(sqrt(number_to_check)), 0, -1):
-        if number_to_check % i == 0:
-            divisors.add(i)
-            divisors.add(int(number_to_check / i))
+    for divisor in range(floor(sqrt(number_to_check)), 0, -1):
+        if number_to_check % divisor == 0:
+            divisors.add(divisor)
+            divisors.add(int(number_to_check / divisor))
     divisors.remove(number_to_check)
     return len(divisors) == 1
 
