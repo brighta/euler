@@ -19,3 +19,11 @@ def is_prime(number_to_check):
             divisors.add(int(number_to_check / i))
     divisors.remove(number_to_check)
     return len(divisors) == 1
+
+# from math import floor
+def is_palindromic_number(number):
+    number_string = str(number)
+    for k in range(int(floor(len(number_string)) / 2)):
+        if number_string[k] != number_string[k * -1 - 1]:
+            return False
+    return True
