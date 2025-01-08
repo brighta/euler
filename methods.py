@@ -24,3 +24,8 @@ def is_palindromic_number(number):
         if number_string[k] != number_string[k * -1 - 1]:
             return False
     return True
+
+def is_pandigital(number_to_check):
+    number_to_check_string = str(number_to_check)
+    all_digits = set(map(str, range(1, len(number_to_check_string) + 1)))
+    return len(number_to_check_string) == len(number_to_check_string) and set(number_to_check_string) == all_digits
