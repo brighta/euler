@@ -32,13 +32,13 @@ def get_distinct_prime_factors(number_to_check, primes_to_check):
     return 0
 
 candidate = 1
-primes = [2]
+primes = [2, 3]
 numbers_with_distinct_prime_factors = []
 while candidate < 5000:
     while candidate > primes[-1]:
-        next_prime_candidate = primes[-1] + 1
+        next_prime_candidate = primes[-1] + 2
         while not is_prime(next_prime_candidate):
-            next_prime_candidate += 1
+            next_prime_candidate += 2
         primes.append(next_prime_candidate)
     if get_distinct_prime_factors(candidate, primes[:-1]) == input_value:
         if len(numbers_with_distinct_prime_factors) == 0 or numbers_with_distinct_prime_factors[-1] == candidate - 1:
