@@ -7,7 +7,7 @@ if len(sys.argv) != 2:
 input_value = int(sys.argv[1])
 
 def is_prime(number_to_check):
-    for divisor in ., -1):
+    for divisor in range(floor(sqrt(number_to_check)), 1, -1):
         if number_to_check % divisor == 0:
             return False
     return True

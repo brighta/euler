@@ -1,7 +1,7 @@
 from math import floor, sqrt
 
 def is_prime(number_to_check):
-    for divisor in range(floor(sqrt(number_to_check)), 2, -1):
+    for divisor in range(floor(sqrt(number_to_check)), 1, -1):
         if number_to_check % divisor == 0:
             return False
     return True

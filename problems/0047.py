@@ -9,7 +9,7 @@ input_value = int(sys.argv[1])
 cache = {}
 
 def is_prime(number_to_check):
-    for divisor in range(floor(sqrt(number_to_check)), 2, -1):
+    for divisor in range(floor(sqrt(number_to_check)), 1, -1):
         if number_to_check % divisor == 0:
             return False
     return True
@@ -34,7 +34,7 @@ def get_distinct_prime_factors(number_to_check, primes_to_check):
 candidate = 1
 primes = [2, 3]
 numbers_with_distinct_prime_factors = []
-while candidate < 5000:
+while True:
     while candidate > primes[-1]:
         next_prime_candidate = primes[-1] + 2
         while not is_prime(next_prime_candidate):
