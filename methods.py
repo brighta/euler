@@ -17,6 +17,14 @@ def is_prime(number_to_check):
             return False
     return True
 
+primes = []
+def get_next_prime():
+    global primes
+    next_prime_candidate = primes[-1] + 2
+    while not is_prime(next_prime_candidate):
+        next_prime_candidate += 2
+    primes.append(next_prime_candidate)
+
 # from math import floor
 def is_palindromic_number(number):
     number_string = str(number)
